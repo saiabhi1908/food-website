@@ -1,0 +1,97 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr; /* Adjust as necessary */
+    align-items: start;
+    gap: 30px; /* Space between grid items */
+    border: 1px solid tomato; /* Border around the order item */
+    padding: 20px; /* Padding inside the order item */
+    margin: 30px 0; /* Margin above and below */
+    font-size: 14px; /* Base font size */
+    color: #505050; /* Text color */
+}
+
+.order-item select {
+    width: 100%; /* Makes the dropdown take the full width of its container */
+    padding: 10px; /* Adds padding for better click area */
+    font-size: 14px; /* Increases font size for better readability */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #505050; /* Text color for dropdown options */
+    cursor: pointer; /* Changes cursor to pointer */
+    appearance: none; /* Removes default dropdown arrow for custom styling (optional) */
+}
+
+/* Optional: Add a custom dropdown arrow */
+.order-item select::after {
+    content: "▼"; /* Custom arrow */
+    position: absolute; /* Positions arrow */
+    right: 10px; /* Adjusts position */
+    pointer-events: none; /* Prevents mouse events on the arrow */
+}
+
+/* Optional: Style for dropdown options */
+.order-item option {
+    padding: 10px; /* Padding for dropdown options */
+    background-color: #fff; /* Background color for options */
+    color: #505050; /* Text color for options */
+}
+
+/* Optional: Change styles on hover */
+.order-item select:hover {
+    border-color: tomato; /* Change border color on hover */
+    background-color: #f9f9f9; /* Change background color on hover */
+}
+.food-processing-container {
+    display: inline-flex; /* Aligns text and arrow */
+    align-items: center; /* Centers items vertically */
+    cursor: pointer; /* Changes the cursor to pointer for interactivity */
+  }
+  
+  .food-processing-container::after {
+    content: ""; /* Arrow symbol, can replace with any arrow character */
+    margin-left: 8px; /* Space between text and arrow */
+    font-size: 14px; /* Adjust the size of the arrow */
+    color: #505050; /* Change to your preferred color */
+  }
+
+  .order-item-food, .order-item-name{
+    font-weight: 600;
+  }
+
+  .order-item-name{
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  .order-item-address{
+    margin-bottom: 10px;
+  }
+
+  .order-item select{
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    width: max(10vw, 120px);
+    padding: 10px;
+    outline: none;
+  }
+
+  @media(max-widrh:1000px){
+    .order-item{
+        font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 8px;
+
+    }
+    .order-item select{
+        padding: 5px;
+        font-size: 12px;
+        
+    }
+
+    .order-item img{
+        width: 40px;
+    }
+  }
+  
+  

@@ -1,0 +1,77 @@
+.list {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list-table-format {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1.5fr 1fr 1fr; /* Set equal column structure */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Header styles */
+.table-header {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1.5fr 1fr 1fr; /* Ensure header uses same grid structure */
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Move the Name heading slightly to the right */
+.table-header.name-header {
+    padding-left: 30px; /* Adjust this value to move the Name heading */
+}
+
+/* Apply consistent padding for all rows */
+.table-row {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1.5fr 1fr 1fr; /* Same grid as header */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Specific styles for each section */
+.food-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.food-name, .food-category, .food-price {
+    padding-left: 20px; /* Consistent padding */
+    text-align: left;
+}
+
+.action-button {
+    justify-self: center; /* Center the button within the grid */
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.cursor {
+    cursor: pointer;
+    color: red;
+}

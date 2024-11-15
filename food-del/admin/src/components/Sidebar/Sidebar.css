@@ -1,0 +1,61 @@
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #a9a9a9;
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
+    font: max(1vw, 10px);
+}
+
+.sidebar-options {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between each sidebar option */
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between icon and text */
+    padding-bottom: 10px; /* Add space below each sidebar item */
+    border: 1px solid #a9a9a9;
+    border-right: 0;
+    padding: 8px 10px;
+    border-radius: 3px 0px 0px 3px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Active state for sidebar option */
+.sidebar-option.active {
+    background-color: red; /* Change background color to red */
+    color: white; /* Change text color to white for better contrast */
+}
+
+/* Styles for sidebar option images */
+.sidebar-option img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Sidebar option text styles */
+.sidebar-option p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: black; /* Default text color */
+}
+
+.sidebar-option.active p {
+    color: white; /* Text color for active state */
+}
+
+@media(max-width:900px){
+    .sidebar-option p {
+        display: none; /* Hide text on smaller screens */
+    }
+}

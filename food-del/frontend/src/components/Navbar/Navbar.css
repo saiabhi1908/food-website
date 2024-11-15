@@ -1,0 +1,189 @@
+/* General Navbar container */
+.navbar {
+    padding: 20px 50px; /* Adds some space around the navbar */
+    display: flex;
+    justify-content: space-between; /* Ensures space between logo, nav items, and icons */
+    align-items: center; /* Vertically centers the items */
+    background-color: #f0f4f4; /* Matches the navbar background */
+}
+
+/* Logo styling */
+.logo {
+    max-width: 220px; /* Increased width for better fit */
+    padding: 10px; /* Added some padding for spacing */
+}
+
+/* Navbar links styling */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px; /* Space between the links */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.navbar ul li {
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #333; /* Adjust text color */
+}
+
+/* Active link underline */
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+/* Right-side container (icons and sign-in button) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between icons and button */
+}
+
+/* Icon styling */
+.navbar-right img {
+    width: 24px; /* Adjust size of the search and basket icons */
+    cursor: pointer;
+}
+
+/* Basket icon with notification dot */
+.navbar-search-icon {
+    position: relative; /* To make the dot absolute relative to this icon */
+}
+
+/* Red notification dot for basket icon */
+.navbar-search-icon .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+}
+
+/* Sign-in button styling */
+.navbar-right button {
+    padding: 8px 16px;
+    background: transparent;
+    background-color: #effcff; /* Button background color */
+    color: #2a3d7b;
+    border: 1px solid tomato;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar-right button:hover {
+    background-color: #fff4f2;
+}
+
+/* Profile dropdown */
+.navbar-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-profile-dropdown {
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex; /* Show dropdown on hover */
+    flex-direction: column;
+    gap: 10px; /* Space between items */
+    background-color: #fff2ef; /* Dropdown background */
+    padding: 12px 25px; /* Padding for dropdown */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid tomato; /* Border color */
+    outline: 2px solid white; /* Outline for effect */
+    list-style: none; /* Removes default list styling */
+}
+
+.nav-profile-dropdown li:hover {
+    color: tomato;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown li:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-profile-dropdown img {
+    margin-right: 10px;
+}
+
+.nav-profile-dropdown hr {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive design */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+
+    .navbar-right {
+        gap: 30px;
+    }
+
+    .navbar-right img {
+        width: 22px;
+    }
+
+    .navbar-right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 140px;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-right img {
+        width: 20px;
+    }
+
+    .navbar-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+}

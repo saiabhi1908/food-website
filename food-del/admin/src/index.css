@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fcfcfc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lighter and thinner horizontal line, with no margin */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0; /* Lighter grey color */
+  margin: 0; /* No margin to pull the line closer */
+}
+
+.app-content {
+  display: flex;
+}
+
+/* Navbar specific styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff; /* Navbar background */
+}
+
+.navbar-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px; /* Space between text and profile */
+}
+
+.title {
+  font-size: 30px; /* Increased font size for Tomato logo */
+  font-weight: bold;
+  color: #ff3d00; /* Tomato-like color */
+}
+
+.admin-panel {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold; /* Make Admin Panel text bold */
+  margin-bottom: -5px; /* Increased negative margin to pull the hr up closer */
+}
+
+.profile {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Make profile image round */
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
